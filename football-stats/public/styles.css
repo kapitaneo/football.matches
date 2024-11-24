@@ -1,0 +1,137 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.app-container {
+    background-color: #ffffff;
+    border: 2px solid #d4d4d4;
+    border-radius: 25px;
+    padding: 20px;
+    max-width: 900px;
+    width: 88%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-container {
+    background-color: #ffea83;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-container h1 {
+    font-size: 28px;
+    color: #34495e;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.register-button, .login-button {
+    background-color: #ffea83;
+    border: 2px solid #34495e;
+    color: #34495e;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover, .login-button:hover {
+    background-color: #f0d77a;
+}
+
+.switcher-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 80px;
+    z-index: 9;
+}
+
+.switch-button {
+    background-color: #ffffff;
+    border: 2px solid #a5d8ff;
+    color: #34495e;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.switch-button.active {
+    background-color: #a5d8ff;
+}
+
+.switch-button:hover {
+    background-color: #e0f2ff;
+}
+
+.loading-spinner {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px;
+}
+
+.league-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #ffea83;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.league-title {
+    font-size: 24px;
+    color: #2b9348;
+    margin-bottom: 10px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.match-card {
+    flex: 0 0 auto;
+    width: 250px;
+    margin: 10px;
+    scroll-snap-align: start;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.match-card:hover {
+    transform: scale(1.05);
+}
