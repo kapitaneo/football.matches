@@ -67,8 +67,11 @@ body {
     padding: 15px;
     margin-bottom: 20px;
     position: sticky;
-    top: 80px;
+    top: 100px;
     z-index: 9;
+    background-color: #ffea83;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .switch-button {
@@ -98,7 +101,7 @@ body {
 
 .league-container {
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     background-color: #ffea83;
     border-radius: 15px;
     padding: 15px;
