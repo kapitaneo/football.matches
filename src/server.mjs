@@ -1,15 +1,25 @@
+import dotenv from 'dotenv';
 import express from 'express';
 import fetch from 'node-fetch';
 import NodeCache from 'node-cache';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+dotenv.config();
 
 const app = express();
 const apiKey = process.env.FOOTBALL_DATA_API_KEY;
 const footballApiUrl = process.env.FOOTBALL_API_URL || 'https://api.football-data.org/v4/matches';
+
 const cache = new NodeCache({ stdTTL: 600 });
 
-app.use(express.static('public'));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', async (req, res) => {
   res.render('index');
